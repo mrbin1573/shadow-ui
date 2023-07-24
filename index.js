@@ -40,18 +40,19 @@ class SButton extends HTMLElement {
           border-radius: 30px;
           background-color: rgba(0, 0, 0, 0.5);
           padding: 1px;
-          overflow: hidden;
       }
       .btn-content:not(:disabled):active {
-          background-color: #e3e3e3;
+          background-color: #f7f7f7;
           transform: translate3d(0, 0, 0);
-          box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
       }
       .btn-content:not(:disabled):hover {
-          background-color: #ffffff;
+          background-color: #f7f7f7;
       }
       .btn-content[actived] {
+          background-color: #f7f7f7;
           transform: translate3d(0, 0, 0);
+          box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
       }
       .btn-content {
           position: relative;
@@ -60,7 +61,7 @@ class SButton extends HTMLElement {
           min-height: 36px;
           min-width: 70px;
           padding: 0 10px;
-          background-color: #e3e3e3;
+          background-color: #f1f1f1;
           border: none;
           transform: translate3d(0, -1.5px, 0);
           box-shadow: -3px 5px 5px rgba(0, 0, 0, 0.3);
@@ -70,7 +71,6 @@ class SButton extends HTMLElement {
           display: flex;
           justify-content: center;
           align-items: center;
-          overflow: hidden;
       }
       .btn-content[loading],
       .btn-content[disabled] {
@@ -83,7 +83,7 @@ class SButton extends HTMLElement {
         z-index: 1;
         width: 100%;
         height: 100%;
-        background-color: rgba(186, 186, 186, 0.8);
+        border-radius: 30px;
       }
       .btn-content[loading]::after {
           position: absolute;
