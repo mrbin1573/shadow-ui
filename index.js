@@ -55,7 +55,7 @@ class SButton extends HTMLElement {
       }
       .btn-content {
           position: relative;
-          transition: 0.2s;
+          transition: 0.1s;
           border-radius: 30px;
           min-height: 36px;
           min-width: 70px;
