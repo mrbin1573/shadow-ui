@@ -47,7 +47,7 @@ class SButton extends HTMLElement {
           transform: translate3d(0, 0, 0);
           box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
       }
-      .btn-content:hover {
+      .btn-content:not(:disabled):hover {
           background-color: #ffffff;
       }
       .btn-content[actived] {
