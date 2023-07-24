@@ -2,14 +2,19 @@
 <html>
     <head>
         <title>测试</title>
+        <link rel="stylesheet" href="./classtocss_global.css" />
         <style></style>
+        <script type="module" src="./index.js"></script>
     </head>
-    <body>
-        <s-button>正常</s-button>
-        <s-button disabled>禁用</s-button>
-        <s-button loading>加载</s-button>
-        <s-button actived>按下</s-button>
+    <body class="p-30">
+        <s-button class="ml-20" type="submit">正常</s-button>
+        <s-button class="ml-20" disabled>禁用</s-button>
+        <s-button class="ml-20" loading>加载</s-button>
 
-        <script src="./index.js"></script>
+        <hr class="my-30" />
+
+        <s-switch class="ml-20"></s-switch>
+        <s-switch class="ml-20" active></s-switch>
+        <s-switch class="ml-20" disabled></s-switch>
     </body>
 </html>
