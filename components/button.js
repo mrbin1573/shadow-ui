@@ -67,7 +67,9 @@ export default class SButton extends HTMLElement {
           justify-content: center;
           align-items: center;
       }
-      .btn-content[loading],
+      .btn-content[loading] {
+        cursor: wait;
+      }
       .btn-content[disabled] {
           cursor: not-allowed;
       }
