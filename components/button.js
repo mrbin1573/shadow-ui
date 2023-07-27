@@ -117,7 +117,7 @@ export default class ShadowButton extends HTMLElement {
                  ${!hasType ? "type='button'" : ''}
                  ${buttonAttributes}
                  ${hasLoading ? 'disabled' : ''}
-                 ><div class="panel">${this.textContent || 'button'}</div></button>
+                 ><div class="panel"><slot/></div></button>
             </div>
         </div>
       `

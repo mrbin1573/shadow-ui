@@ -21,6 +21,8 @@
     --shortAnimation: 0.1s;
     --normalAnimation: 0.3s;
     --longAnimation: 0.5s;
+
+    color: #101010;
 }
 * {
     box-sizing: border-box;

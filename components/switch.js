@@ -7,16 +7,23 @@ export default class ShadowSwitch extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
+    }
+
+    // 监听所有属性名
+    static get observedAttributes() {
+        return Array.prototype.map.call(this.attributes || [], (attribute) => attribute.name)
+    }
+
+    // 当 custom element 首次被插入文档 DOM 时，被调用。
+    connectedCallback() {
         this.render()
     }
 
-    static get observedAttributes() {
-        if (!this.attributes) return
-        return Array.prototype.map.call(this.attributes, (attribute) => attribute.name) // 获取所有属性名
-    }
+    // 当 custom element 从文档 DOM 中删除时，被调用。
+    disconnectedCallback() {}
 
+    // 属性变化回调
     attributeChangedCallback(attrName, oldValue, newValue) {
-        console.log('attrName ====================> ', attrName)
         this.render()
     }
 
