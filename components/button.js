@@ -3,7 +3,7 @@
  * 支<button所有属性>
  * 扩展属性loading，此时为disabled状态
  */
-export default class SButton extends HTMLElement {
+export default class ShadowButton extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
@@ -50,7 +50,7 @@ export default class SButton extends HTMLElement {
         }
         .btn-content {
             position: relative;
-            transition: 0.1s;
+            transition: var(--shortAnimation);
             border-radius: 30px;
             min-height: 36px;
             min-width: 70px;

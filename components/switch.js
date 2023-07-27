@@ -3,7 +3,7 @@
  * disabled 禁用
  * auto 自动切换
  */
-export default class SSwitch extends HTMLElement {
+export default class ShadowSwitch extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
@@ -40,7 +40,7 @@ export default class SSwitch extends HTMLElement {
         }
         .s-track[disabled] .bg-track,
         .s-track[disabled] .s-switch {
-            background: #dedede;
+            background: var(--disabledColor);
             cursor: not-allowed;
             box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0);
         }
@@ -62,10 +62,10 @@ export default class SSwitch extends HTMLElement {
             border-radius: 18px;
             background: linear-gradient(
                 to right,
-                rgb(9, 205, 9),
-                rgb(9, 205, 9) 50%,
-                rgb(246, 15, 15) 50%,
-                rgb(246, 12, 15)
+                var(--primaryColor),
+                var(--primaryColor) 50%,
+                var(--dangerColor) 50%,
+                var(--dangerColor)
             );
             box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.3);
             display: flex;
@@ -102,8 +102,8 @@ export default class SSwitch extends HTMLElement {
             margin-left: 4px;
         }
         </style>
-        <s-div>
-            <div class="s-track" ${buttonAttributes}>
+        <s-box>
+            <div class="s-track reset" ${buttonAttributes}>
                 <div class="s-switch">
                     <div class="left"></div>
                     <div class="right"></div>
@@ -113,7 +113,7 @@ export default class SSwitch extends HTMLElement {
                     <div>关</div>
                 </div>
             </div>
-        </s-div>
+        </s-box>
       `
     }
 }

@@ -1,0 +1,27 @@
+:root {
+    /* height */
+    --largeHeight: 42px;
+    --normalHeight: 36px;
+    --smallHeight: 30px;
+
+    /* fontSize */
+    --largeFontSize: 30px;
+    --normalFontSize: 24px;
+    --smallFontSize: 18px;
+
+    /* color */
+    --primaryColor: rgb(16, 211, 45);
+    --dangerColor: rgb(245, 35, 35);
+    --warnColor: rgb(229, 229, 28);
+    --disabledColor: #dedede;
+    --textColor: #161616;
+    --border-color: #dedede;
+
+    /* 动画时长 */
+    --shortAnimation: 0.1s;
+    --normalAnimation: 0.3s;
+    --longAnimation: 0.5s;
+}
+* {
+    box-sizing: border-box;
+}
